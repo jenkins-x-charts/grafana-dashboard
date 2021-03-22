@@ -12,93 +12,182 @@
       }
     ]
   },
-  "description": "Logs & metrics for Lighthouse",
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 2,
-  "iteration": 1616256286550,
+  "id": 7,
+  "iteration": 1614938433756,
   "links": [],
   "panels": [
     {
+      "alignNumbersToRightEnabled": false,
+      "columnAliases": [],
+      "columnFiltersEnabled": true,
+      "columnWidthHints": [],
+      "columns": [],
+      "compactRowsEnabled": true,
       "datasource": "Prometheus",
+      "datatablePagingType": "simple_numbers",
+      "datatableTheme": "basic_theme",
+      "emptyData": false,
       "fieldConfig": {
         "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
-            "hideFrom": {
-              "graph": false,
-              "legend": false,
-              "tooltip": false
-            },
-            "lineInterpolation": "linear",
-            "lineStyle": {
-              "fill": "solid"
-            },
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "never",
-            "spanNulls": true
-          },
-          "mappings": [],
+          "color": {},
+          "custom": {},
           "thresholds": {
             "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "none"
+            "steps": []
+          }
         },
         "overrides": []
       },
+      "fontSize": "100%",
       "gridPos": {
         "h": 7,
         "w": 24,
         "x": 0,
         "y": 0
       },
-      "id": 7,
-      "options": {
-        "graph": {},
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "right"
+      "hoverEnabled": true,
+      "id": 16,
+      "infoEnabled": true,
+      "lengthChangeEnabled": true,
+      "orderColumnEnabled": true,
+      "pagingTypes": [
+        {
+          "$$hashKey": "object:98",
+          "text": "Page number buttons only",
+          "value": "numbers"
         },
-        "tooltipOptions": {
-          "mode": "single"
+        {
+          "$$hashKey": "object:99",
+          "text": "'Previous' and 'Next' buttons only",
+          "value": "simple"
+        },
+        {
+          "$$hashKey": "object:100",
+          "text": "'Previous' and 'Next' buttons, plus page numbers",
+          "value": "simple_numbers"
+        },
+        {
+          "$$hashKey": "object:101",
+          "text": "'First', 'Previous', 'Next' and 'Last' buttons",
+          "value": "full"
+        },
+        {
+          "$$hashKey": "object:102",
+          "text": "'First', 'Previous', 'Next' and 'Last' buttons, plus page numbers",
+          "value": "full_numbers"
+        },
+        {
+          "$$hashKey": "object:103",
+          "text": "'First' and 'Last' buttons, plus page numbers",
+          "value": "first_last_numbers"
         }
-      },
+      ],
+      "panelHeight": 211,
       "pluginVersion": "7.4.0",
+      "rowNumbersEnabled": false,
+      "rowsPerPage": 50,
+      "scroll": true,
+      "scrollHeight": "default",
+      "searchEnabled": true,
+      "searchHighlightingEnabled": true,
+      "showCellBorders": false,
+      "showHeader": true,
+      "showRowBorders": false,
+      "sort": {
+        "col": 0,
+        "desc": true
+      },
+      "sortByColumns": [
+        {
+          "$$hashKey": "object:36",
+          "columnData": "2",
+          "sortMethod": "asc"
+        },
+        {
+          "$$hashKey": "object:377",
+          "columnData": "1",
+          "sortMethod": "asc"
+        }
+      ],
+      "sortByColumnsData": [
+        [
+          2,
+          "asc"
+        ]
+      ],
+      "stripedRowsEnabled": true,
+      "styles": [
+        {
+          "$$hashKey": "object:38",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "$$hashKey": "object:227",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value",
+          "splitPattern": "/ /",
+          "thresholds": [],
+          "type": "date",
+          "unit": "short"
+        }
+      ],
       "targets": [
         {
-          "expr": "sum by(event_type) (rate(lighthouse_webhook_counter[5m]))",
+          "expr": "sum by (name) (certmanager_certificate_expiration_timestamp_seconds*1000)",
+          "format": "table",
+          "instant": true,
           "interval": "",
           "legendFormat": "",
           "queryType": "randomWalk",
           "refId": "A"
         }
       ],
-      "title": "Webhook events by type",
-      "type": "timeseries"
+      "themeOptions": {
+        "dark": "./styles/dark.scss",
+        "light": "./styles/light.scss"
+      },
+      "themes": [
+        {
+          "$$hashKey": "object:73",
+          "disabled": false,
+          "text": "Basic",
+          "value": "basic_theme"
+        },
+        {
+          "$$hashKey": "object:74",
+          "disabled": true,
+          "text": "Bootstrap",
+          "value": "bootstrap_theme"
+        },
+        {
+          "$$hashKey": "object:75",
+          "disabled": true,
+          "text": "Foundation",
+          "value": "foundation_theme"
+        },
+        {
+          "$$hashKey": "object:76",
+          "disabled": true,
+          "text": "ThemeRoller",
+          "value": "themeroller_theme"
+        }
+      ],
+      "title": "Certificates expiration dates",
+      "transform": "table",
+      "type": "briangann-datatable-panel"
     },
     {
       "datasource": "Prometheus",
@@ -152,7 +241,7 @@
         "x": 0,
         "y": 7
       },
-      "id": 11,
+      "id": 4,
       "options": {
         "graph": {},
         "legend": {
@@ -167,7 +256,7 @@
       "pluginVersion": "7.4.0",
       "targets": [
         {
-          "expr": "sum by(container) (rate(container_cpu_usage_seconds_total{container=~\"$app\"}[5m]))",
+          "expr": "sum by(pod) (rate(container_cpu_usage_seconds_total{container=\"cert-manager\"}[5m]))",
           "interval": "",
           "legendFormat": "",
           "queryType": "randomWalk",
@@ -229,7 +318,7 @@
         "x": 12,
         "y": 7
       },
-      "id": 9,
+      "id": 6,
       "options": {
         "graph": {},
         "legend": {
@@ -244,7 +333,7 @@
       "pluginVersion": "7.4.0",
       "targets": [
         {
-          "expr": "sum by(container) (container_memory_working_set_bytes{container=~\"$app\"})",
+          "expr": "sum by(pod) (container_memory_working_set_bytes{container=\"cert-manager\"})",
           "interval": "",
           "legendFormat": "",
           "queryType": "randomWalk",
@@ -253,6 +342,131 @@
       ],
       "title": "Memory used",
       "type": "timeseries"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {},
+          "custom": {},
+          "thresholds": {
+            "mode": "absolute",
+            "steps": []
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 15
+      },
+      "hiddenSeries": false,
+      "id": 14,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null as zero",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.4.0",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "count(certmanager_certificate_ready_status{condition=\"True\"} == 1)",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "legendFormat": "ready",
+          "queryType": "randomWalk",
+          "refId": "A"
+        },
+        {
+          "expr": "count(certmanager_certificate_ready_status{condition=\"False\"} == 1)",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "not ready",
+          "refId": "B"
+        },
+        {
+          "expr": "count(certmanager_certificate_ready_status{condition=\"Unknown\"} == 1)",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "unknown",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Certificates statuses",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:701",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:702",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
@@ -271,11 +485,11 @@
       "gridPos": {
         "h": 8,
         "w": 12,
-        "x": 0,
+        "x": 12,
         "y": 15
       },
       "hiddenSeries": false,
-      "id": 4,
+      "id": 8,
       "legend": {
         "avg": false,
         "current": false,
@@ -292,7 +506,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.3",
+      "pluginVersion": "7.4.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -302,9 +516,11 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(count_over_time({app=~\"$app\"} |~ \"(?i)$search\" |~ \"(?i)$level\" | json | line_format \"{{.log}}\" | json | level=~\"$level\" [$__interval])) by (app)",
-          "legendFormat": "",
+          "expr": "count_over_time({app=\"cert-manager\"} |~ \"(?i)$search\" [$__interval])",
+          "instant": false,
+          "legendFormat": "logs",
           "queryType": "randomWalk",
+          "range": true,
           "refId": "A"
         }
       ],
@@ -312,7 +528,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Logs by app",
+      "title": "Logs",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -352,118 +568,6 @@
       }
     },
     {
-      "aliasColors": {},
-      "bars": true,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "Loki",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 15
-      },
-      "hiddenSeries": false,
-      "id": 5,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": false,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.4.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "alias": "{level=\"error\"}",
-          "color": "#F2495C"
-        },
-        {
-          "alias": "{level=\"warning\"}",
-          "color": "#FF9830"
-        },
-        {
-          "alias": "{level=\"info\"}",
-          "color": "#73BF69"
-        },
-        {
-          "alias": "{level=\"debug\"}",
-          "color": "#5794F2"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": true,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "sum(count_over_time({app=~\"$app\"} |~ \"(?i)$search\" |~ \"(?i)$level\" | json | line_format \"{{.log}}\" | json | level=~\"$level\" [$__interval])) by (level)",
-          "legendFormat": "",
-          "queryType": "randomWalk",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Logs by level",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
       "datasource": "Loki",
       "description": "",
       "fieldConfig": {
@@ -482,7 +586,7 @@
         "x": 0,
         "y": 23
       },
-      "id": 2,
+      "id": 12,
       "options": {
         "showLabels": false,
         "showTime": true,
@@ -492,7 +596,7 @@
       "pluginVersion": "7.3.5",
       "targets": [
         {
-          "expr": "{app=~\"$app\"} |~ \"(?i)$search\" |~ \"(?i)$level\" | json | line_format \"{{.log}}\" | json | level=~\"$level\" | line_format \"{{.level | upper | trunc 4}}\\t[{{.app}}{{with .plugin}}:{{.}}{{end}}]\\t{{ if .name }}{{.name}}: {{end}}{{if .Webhook}}{{.Webhook}} webhook for {{.Link}}: {{end}}{{.msg}}{{with .error}} Error: {{.}}{{end}}\\t({{.pod}})\"",
+          "expr": "{app=\"cert-manager\"} |~ \"(?i)$search\" | json | line_format \"{{.log}}\"",
           "legendFormat": "",
           "queryType": "randomWalk",
           "refId": "A"
@@ -509,120 +613,10 @@
   "style": "dark",
   "tags": [
     "jenkins-x",
-    "lighthouse"
+    "cert-manager"
   ],
   "templating": {
     "list": [
-      {
-        "allValue": null,
-        "current": {
-          "selected": true,
-          "tags": [],
-          "text": [
-            "All"
-          ],
-          "value": [
-            "$__all"
-          ]
-        },
-        "datasource": "Loki",
-        "definition": "label_values(app)",
-        "description": null,
-        "error": null,
-        "hide": 0,
-        "includeAll": true,
-        "label": null,
-        "multi": true,
-        "name": "app",
-        "options": [
-          {
-            "selected": true,
-            "text": "All",
-            "value": "$__all"
-          },
-          {
-            "selected": false,
-            "text": "lighthouse-foghorn",
-            "value": "lighthouse-foghorn"
-          },
-          {
-            "selected": false,
-            "text": "lighthouse-keeper",
-            "value": "lighthouse-keeper"
-          },
-          {
-            "selected": false,
-            "text": "lighthouse-webhooks",
-            "value": "lighthouse-webhooks"
-          }
-        ],
-        "query": "label_values(app)",
-        "refresh": 0,
-        "regex": "lighthouse.*",
-        "skipUrlSync": false,
-        "sort": 1,
-        "tagValuesQuery": "",
-        "tags": [],
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
-      },
-      {
-        "allValue": null,
-        "current": {
-          "selected": true,
-          "tags": [],
-          "text": [
-            "All"
-          ],
-          "value": [
-            "$__all"
-          ]
-        },
-        "description": null,
-        "error": null,
-        "hide": 0,
-        "includeAll": true,
-        "label": null,
-        "multi": true,
-        "name": "level",
-        "options": [
-          {
-            "selected": true,
-            "text": "All",
-            "value": "$__all"
-          },
-          {
-            "selected": false,
-            "text": "error",
-            "value": "error"
-          },
-          {
-            "selected": false,
-            "text": "warning",
-            "value": "warning"
-          },
-          {
-            "selected": false,
-            "text": "info",
-            "value": "info"
-          },
-          {
-            "selected": false,
-            "text": "debug",
-            "value": "debug"
-          },
-          {
-            "selected": false,
-            "text": "trace",
-            "value": "trace"
-          }
-        ],
-        "query": "error, warning, info, debug, trace",
-        "queryValue": "",
-        "skipUrlSync": false,
-        "type": "custom"
-      },
       {
         "current": {
           "selected": false,
@@ -648,12 +642,12 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Lighthouse",
-  "uid": "lighthouse",
+  "title": "cert-manager",
+  "uid": "cert-manager",
   "version": 1
 }
