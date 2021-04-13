@@ -2808,7 +2808,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Chunks in Streams",
+      "title": "Streams in memory",
       "tooltip": {
         "shared": true,
         "sort": 0,
