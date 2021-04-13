@@ -1748,7 +1748,7 @@
           "refId": "A"
         },
         {
-          "expr": "loki_distributor_ingester_append_failures_total",
+          "expr": "rate(loki_distributor_ingester_append_failures_total[5m])",
           "interval": "",
           "legendFormat": "failed",
           "refId": "B"
