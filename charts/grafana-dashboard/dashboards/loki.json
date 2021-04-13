@@ -2231,10 +2231,12 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "Prometheus",
+      "description": "Percent of the uncompressed size",
       "fieldConfig": {
         "defaults": {
           "custom": {},
-          "links": []
+          "links": [],
+          "unit": "percentunit"
         },
         "overrides": []
       },
@@ -2279,7 +2281,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "histogram_quantile(0.95, sum(rate(loki_ingester_chunk_compression_ratio_bucket[5m])) by (le))",
+          "expr": "1 / histogram_quantile(0.95, sum(rate(loki_ingester_chunk_compression_ratio_bucket[5m])) by (le))",
           "interval": "",
           "legendFormat": "ratio",
           "refId": "A"
@@ -2289,7 +2291,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Chunk Compression Ratios",
+      "title": "Chunk Compression",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -2306,7 +2308,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:155",
-          "format": "percent",
+          "format": "percentunit",
           "label": null,
           "logBase": 1,
           "max": null,
