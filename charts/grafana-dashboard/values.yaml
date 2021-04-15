@@ -1,3 +1,6 @@
 # this is the label defined in Grafana sidecar dashboards loader
 # used to retrieve all configmaps which contains Grafana dashboards
 label: jenkins-x.io/grafana-dashboard
+image:
+  repository: gcr.io/jenkinsxio/grafana-dashboard
+  tag: 0.1.3
