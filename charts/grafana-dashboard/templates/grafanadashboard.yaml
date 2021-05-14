@@ -1,9 +1,9 @@
-{{- if not .Values.useGrafanaOperator }}
+{{- if .Values.useGrafanaOperator }}
 {{ range $path, $_ := $.Files.Glob "dashboards/*.json" }}
 {{ $name := trimSuffix (ext $path) (base $path) }}
 ---
-apiVersion: v1
-kind: ConfigMap
+apiVersion: integreatly.org/v1alpha1
+kind: GrafanaDashboard
 metadata:
   name: {{ $.Chart.Name }}-{{ $name }}
   labels:
@@ -11,8 +11,8 @@ metadata:
     app.kubernetes.io/name: {{ $.Chart.Name }}
     helm.sh/chart: {{ $.Chart.Name }}-{{ $.Chart.Version }}
     {{ $.Values.label }}: "1"
-data:
-  {{ base $path }}: |-
+spec:
+  json: >
     {{- $.Files.Get $path | nindent 4 }}
 {{ end }}
 {{- end }}

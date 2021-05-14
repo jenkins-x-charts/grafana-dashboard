@@ -1,6 +1,6 @@
 # Grafana Dashboard
 
-This is a Helm Chart which contains Grafana dashboards, packaged in ConfigMaps.
+This is a Helm Chart which contains Grafana dashboards, packaged in ConfigMaps by default or in a grafana-operator `datasources` custom resource if `.Values.useGrafanaOperator: true`.
 
 This chart should be deployed alongside a Grafana chart, with the dashboards loader sidecar enabled, and the `label` configured to match.
 
