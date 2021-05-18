@@ -1,3 +1,6 @@
 # this is the label defined in Grafana sidecar dashboards loader
 # used to retrieve all configmaps which contains Grafana dashboards
 label: jenkins-x.io/grafana-dashboard
+
+# render dashboards as integr8ly grafana-operator "GrafanaDashboard" CR
+useGrafanaOperator: false
