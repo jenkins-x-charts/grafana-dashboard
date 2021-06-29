@@ -3,7 +3,7 @@ name: grafana-dashboard
 description: A helm chart for packaging Grafana dashboards for Jenkins X
 icon: https://avatars.githubusercontent.com/u/7195757
 home: https://github.com/jenkins-x-charts/grafana-dashboard
-version: 0.0.1
-appVersion: latest
+version: 0.2.2
+appVersion: 0.2.2
 sources:
-- https://github.com/jenkins-x-charts/grafana-dashboard
+  - https://github.com/jenkins-x-charts/grafana-dashboard
